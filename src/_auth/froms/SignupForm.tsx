@@ -1,7 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-import { useState } from 'react'
 
 import { Button } from "@/components/ui/button"
 import {
@@ -16,15 +15,18 @@ import { Input } from "@/components/ui/input"
 import { singupValidator } from "@/lib/validators"
 import Loader from "@/components/shared/Loader"
 import { Link } from "react-router-dom"
-import { createUserAccount } from "@/lib/appwrite/api"
 import { useToast } from "@/components/ui/use-toast"
+import { useCreateUserAccount, useSignInAccount } from "@/lib/react-query/queriesAndMutations"
+import { signInAccount } from "@/lib/appwrite/api"
 
 
 const SignupFrom = () => {
 
     const { toast } = useToast()
 
-    const [loading, setLoading] = useState(false)
+    // const { mutateAsync: createUserAccount, isLoading: is } = useCreateUserAccount()
+    const { mutateAsync: createUserAccount, isLoading: isCreatingAccount } = useCreateUserAccount();
+
 
 
     // 1. Define your form.
@@ -48,6 +50,13 @@ const SignupFrom = () => {
                 title: 'There was an error signing in!!'
             })
         }
+
+        const session = await signInAccount({
+            email: user.email,
+            password: user.password
+        })
+
+        console.log(session)
     }
 
 
@@ -122,22 +131,19 @@ const SignupFrom = () => {
                     />
                     <Button type="submit" className="shad-button_primary">
                         {
-                            loading ? (
+                            isCreatingAccount ? (
                                 <div className="flex-center gap-2">
                                     <Loader /> Loading...
                                 </div>
                             ) : 'Submit'
                         }
                     </Button>
-                    <Button onClick={() => toast({ title: 'yey its working', })} type="button" className="shad-button_primary">
-                        Submit
 
-                    </Button>
 
                     <p className="text-small-regular text-light-2 text-start mt-2">
                         Already have an account?
                         <Link
-                    
+
                             to="/sign-in"
                             className="text-primary-500 text-small-semibold ml-1">
                             Log in
