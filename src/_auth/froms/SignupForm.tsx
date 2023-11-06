@@ -17,9 +17,12 @@ import { singupValidator } from "@/lib/validators"
 import Loader from "@/components/shared/Loader"
 import { Link } from "react-router-dom"
 import { createUserAccount } from "@/lib/appwrite/api"
+import { useToast } from "@/components/ui/use-toast"
 
 
 const SignupFrom = () => {
+
+    const { toast } = useToast()
 
     const [loading, setLoading] = useState(false)
 
@@ -37,10 +40,14 @@ const SignupFrom = () => {
 
     // 2. Define a submit handler.
     async function onSubmit(user: z.infer<typeof singupValidator>) {
-        setLoading(true)
         const newUser = await createUserAccount(user)
-        setLoading(false)
-        console.log(newUser)
+
+        if (!newUser) {
+            toast({
+                variant: 'destructive',
+                title: 'There was an error signing in!!'
+            })
+        }
     }
 
 
@@ -122,10 +129,15 @@ const SignupFrom = () => {
                             ) : 'Submit'
                         }
                     </Button>
+                    <Button onClick={() => toast({ title: 'yey its working', })} type="button" className="shad-button_primary">
+                        Submit
+
+                    </Button>
 
                     <p className="text-small-regular text-light-2 text-start mt-2">
                         Already have an account?
                         <Link
+                    
                             to="/sign-in"
                             className="text-primary-500 text-small-semibold ml-1">
                             Log in
