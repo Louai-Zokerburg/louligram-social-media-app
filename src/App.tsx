@@ -10,23 +10,30 @@ import RootLayout from './_root/RootLayout'
 import { Home } from './_root/pages'
 import { Toaster } from './components/ui/toaster'
 
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
+
 const App = () => {
     return (
         <>
-            <main className="flex h-screen">
 
-                <Routes>
-                    <Route element={<AuthLayout />}>
-                        <Route path='/sign-in' element={<SigninForm />} />
-                        <Route path='/sign-up' element={<SignupForm />} />
-                    </Route>
+            <QueryClientProvider client={queryClient}>
+                <main className="flex h-screen">
 
-                    <Route element={<RootLayout />}>
-                        <Route index element={<Home />} />
-                    </Route>
-                </Routes>
-                <Toaster />
-            </main>
+                    <Routes>
+                        <Route element={<AuthLayout />}>
+                            <Route path='/sign-in' element={<SigninForm />} />
+                            <Route path='/sign-up' element={<SignupForm />} />
+                        </Route>
+
+                        <Route element={<RootLayout />}>
+                            <Route index element={<Home />} />
+                        </Route>
+                    </Routes>
+                    <Toaster />
+                </main>
+            </QueryClientProvider>
         </>
     )
 }

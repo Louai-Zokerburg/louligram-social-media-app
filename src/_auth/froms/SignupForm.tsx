@@ -56,6 +56,10 @@ const SignupFrom = () => {
             password: user.password
         })
 
+        if (!session) {
+            toast({ variant: 'destructive', title: 'There was an erro signing in' })
+        }
+
         console.log(session)
     }
 

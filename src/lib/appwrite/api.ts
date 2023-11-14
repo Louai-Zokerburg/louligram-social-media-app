@@ -23,6 +23,8 @@ export const createUserAccount = async (user: INewUser) => {
       username: user.username,
     });
 
+    
+
     return newUser;
   } catch (error) {
     console.log(error);
