@@ -12,13 +12,13 @@ const Home = () => {
     isLoading: isPostLoading,
     isError: isErrorPosts,
   } = useGetRecentPosts();
-  const {
-    data: creators,
-    isLoading: isUserLoading,
-    isError: isErrorCreators,
-  } = useGetUsers(10);
+  // const {
+  //   data: creators,
+  //   isLoading: isUserLoading,
+  //   isError: isErrorCreators,
+  // } = useGetUsers(10);
 
-  if (isErrorPosts || isErrorCreators) {
+  if (isErrorPosts || false) {
     return (
       <div className="flex flex-1">
         <div className="home-container">
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="home-creators">
+      {/* <div className="home-creators">
         <h3 className="h3-bold text-light-1">Top Creators</h3>
         {isUserLoading && !creators ? (
           <Loader />
@@ -63,7 +63,7 @@ const Home = () => {
             ))}
           </ul>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
