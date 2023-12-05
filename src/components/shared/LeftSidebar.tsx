@@ -66,12 +66,12 @@ const LeftSidebar = () => {
                 }`}>
                 <NavLink
                   to={link.route}
-                  className={`flex gap-4 items-center p-4 group-hover:text-dark-4 ${ isActive && 'text-dark-4'}`}>
+                  className="flex gap-4 items-center p-4">
                   <img
                     src={link.imgURL}
                     alt={link.label}
-                    className={`group-hover:invert-black ${
-                      isActive && "invert-black"
+                    className={`group-hover:invert-white ${
+                      isActive && "invert-white"
                     }`}
                   />
                   {link.label}
