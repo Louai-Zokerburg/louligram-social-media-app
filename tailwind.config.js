@@ -20,6 +20,24 @@ module.exports = {
     },
     extend: {
       colors: {
+        // shared colors
+        'primary-color': '#3EFF7F',
+        'danger-color': '#FF5A5A',
+        'gray-color': '#808080',
+        'white-color': '#F8F8F8',
+        'black-color': '#1C1C1C',
+
+        // dark mode colors
+        'bg-color-dark': '#000000',
+        'secondary-color-dark': '#09090A',
+        'accent-color-dark': '#101012',
+
+        // light mode colors
+        'bg-color': '#FDFDFD',
+        'secondary-color': '#F5F5F5',
+        'accent-color': '#E4E4E4',
+
+        // old colors
         'primary-500': '#3EFF7F',
         'red': '#FF5A5A',
         'dark-1': '#000000',
