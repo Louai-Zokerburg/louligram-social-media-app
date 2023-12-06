@@ -270,7 +270,7 @@
   }
 
   .shad-textarea {
-    @apply h-36 bg-dark-3 rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+    @apply h-36 bg-accent-color dark:bg-accent-color-dark rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
   }
 
   /* Button */
@@ -278,8 +278,13 @@
     @apply bg-primary-color hover:bg-primary-hover-color text-black-color flex gap-2 !important;
   }
 
+  
   .shad-button_dark_4 {
-    @apply h-12 bg-dark-4 px-5 text-light-1 flex gap-2 !important;
+    @apply h-12 bg-accent-color dark:bg-accent-color-dark px-5  text-black-color dark:text-white-color flex gap-2 !important;
+  }
+
+  .shad-button_secondary {
+    @apply h-12 bg-accent-color dark:bg-accent-color-dark px-5  text-black-color dark:text-white-color flex gap-2 !important;
   }
 
   .shad-button_ghost {
