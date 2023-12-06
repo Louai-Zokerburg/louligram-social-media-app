@@ -250,7 +250,7 @@
 
   /* User card */
   .user-card {
-    @apply flex-center flex-col gap-4 border border-dark-4 rounded-[20px] px-5 py-8;
+    @apply flex-center flex-col gap-4 border-accent-color border-2 dark:border-accent-color-dark rounded-[20px] px-5 py-8;
   }
 }
 
