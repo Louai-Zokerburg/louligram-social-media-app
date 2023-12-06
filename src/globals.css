@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-dark-1 text-white min-h-screen font-inter;
+    @apply bg-bg-color dark:bg-bg-color-dark text-black-color dark:text-white-color min-h-screen font-inter;
   }
 }
 
@@ -30,6 +30,10 @@
 
   .h3-bold {
     @apply text-[24px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .h4-bold {
+    @apply text-[18px] font-bold leading-[140%] tracking-tighter;
   }
 
   .base-semibold {
@@ -78,7 +82,7 @@
   }
 
   .invert-black {
-    @apply invert brightness-200 transition;
+    @apply invert brightness-100 transition;
 }
 
   .flex-center {
@@ -254,7 +258,7 @@
   /* SHADCN COMPONENTS */
   /* Form */
   .shad-form_label {
-    @apply text-white !important;
+    @apply text-black-color dark:text-white-color !important;
   }
 
   .shad-form_message {
@@ -262,7 +266,7 @@
   }
 
   .shad-input {
-    @apply h-12 bg-dark-4 border-none placeholder:text-light-3 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+    @apply h-12 bg-accent-color dark:bg-accent-color-dark border-none placeholder:text-gray-color focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-gray-color !important;
   }
 
   .shad-textarea {
@@ -271,7 +275,7 @@
 
   /* Button */
   .shad-button_primary {
-    @apply bg-primary-500 hover:bg-primary-500 text-dark-4 flex gap-2 !important;
+    @apply bg-primary-color hover:bg-primary-hover-color text-black-color flex gap-2 !important;
   }
 
   .shad-button_dark_4 {

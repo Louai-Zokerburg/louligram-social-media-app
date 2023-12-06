@@ -74,15 +74,15 @@ const SignupForm = () => {
 
   return (
     <Form {...form}>
-      <div className="sm:w-420 flex-center flex-col">
-        <img src="/assets/images/logo.svg" alt="logo" />
+      <div className="sm:w-420 items-start justify-start flex-col">
+        <img src="/assets/images/logo.svg" alt="logo" className="dark:invert-white with-[160px]" />
 
-        <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
+        <h2 className="h4-bold md:h3-bold pt-2 sm:pt-5">
           Create a new account
         </h2>
-        <p className="text-light-3 small-medium md:base-regular mt-2">
+        {/* <p className="text-gray-color small-medium md:base-regular mt-2">
           To use snapgram, Please enter your details
-        </p>
+        </p> */}
 
         <form
           onSubmit={form.handleSubmit(handleSignup)}
@@ -94,7 +94,7 @@ const SignupForm = () => {
               <FormItem>
                 <FormLabel className="shad-form_label">Name</FormLabel>
                 <FormControl>
-                  <Input type="text" className="shad-input" {...field} />
+                  <Input type="text" className="shad-input" {...field} placeholder="Louai Boumediene" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -108,7 +108,7 @@ const SignupForm = () => {
               <FormItem>
                 <FormLabel className="shad-form_label">Username</FormLabel>
                 <FormControl>
-                  <Input type="text" className="shad-input" {...field} />
+                  <Input type="text" className="shad-input" {...field} placeholder="@louai"/>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -122,7 +122,7 @@ const SignupForm = () => {
               <FormItem>
                 <FormLabel className="shad-form_label">Email</FormLabel>
                 <FormControl>
-                  <Input type="text" className="shad-input" {...field} />
+                  <Input type="text" className="shad-input" {...field} placeholder="example@gmail.com"/>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -136,7 +136,7 @@ const SignupForm = () => {
               <FormItem>
                 <FormLabel className="shad-form_label">Password</FormLabel>
                 <FormControl>
-                  <Input type="password" className="shad-input" {...field} />
+                  <Input type="password" className="shad-input" {...field} placeholder="123456789"/>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -153,11 +153,11 @@ const SignupForm = () => {
             )}
           </Button>
 
-          <p className="text-small-regular text-light-1 text-center mt-2">
+          <p className="text-small-regular text-black-color dark:text-white-color mt-2">
             Already have an account?
             <Link
               to="/sign-in"
-              className="text-primary-500 text-small-semibold ml-1">
+              className="text-primary-color text-small-semibold ml-1">
               Log in
             </Link>
           </p>

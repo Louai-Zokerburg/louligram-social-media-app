@@ -22,6 +22,7 @@ module.exports = {
       colors: {
         // shared colors
         'primary-color': '#3EFF7F',
+        'primary-hover-color': '#3efa7e',
         'danger-color': '#FF5A5A',
         'gray-color': '#808080',
         'white-color': '#F8F8F8',
