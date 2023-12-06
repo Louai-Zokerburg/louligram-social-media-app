@@ -33,6 +33,7 @@ const LeftSidebar = () => {
             alt="logo"
             width={170}
             height={36}
+            className="dark:invert-white"
           />
         </Link>
 
@@ -49,7 +50,7 @@ const LeftSidebar = () => {
             />
             <div className="flex flex-col">
               <p className="body-bold">{user.name}</p>
-              <p className="small-regular text-light-3">@{user.username}</p>
+              <p className="small-regular text-gray-color">@{user.username}</p>
             </div>
           </Link>
         )}
@@ -62,17 +63,15 @@ const LeftSidebar = () => {
               <li
                 key={link.label}
                 className={`leftsidebar-link group ${
-                  isActive && "bg-primary-500"
+                  isActive && "bg-primary-color"
                 }`}>
                 <NavLink
                   to={link.route}
-                  className={`flex gap-4 items-center p-4 group-hover:text-dark-4 ${ isActive && 'text-dark-4'}`}>
+                  className={`flex gap-4 items-center p-4 dark:hover:text-black-color ${isActive && 'dark:text-black-color'}`}>
                   <img
                     src={link.imgURL}
                     alt={link.label}
-                    className={`group-hover:invert-black ${
-                      isActive && "invert-black"
-                    }`}
+                    className={`dark:invert-white`}
                   />
                   {link.label}
                 </NavLink>
@@ -86,7 +85,7 @@ const LeftSidebar = () => {
         variant="ghost"
         className="shad-button_ghost"
         onClick={(e) => handleSignOut(e)}>
-        <img src="/assets/icons/logout.svg" alt="logout" />
+        <img src="/assets/icons/logout.svg" alt="logout" className="dark:invert-white"/>
         <p className="small-medium lg:base-medium">Logout</p>
       </Button>
     </nav>
