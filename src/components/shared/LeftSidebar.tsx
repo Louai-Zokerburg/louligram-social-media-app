@@ -71,7 +71,8 @@ const LeftSidebar = () => {
                   <img
                     src={link.imgURL}
                     alt={link.label}
-                    className={`dark:invert-white`}
+                    // className={`dark:invert-white dark:hover:invert dark:hover:brightness-0`}
+                    className={`${isActive ? "dark:invert-0" : "dark:invert-white"}`}
                   />
                   {link.label}
                 </NavLink>

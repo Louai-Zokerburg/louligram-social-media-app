@@ -14,14 +14,14 @@ const Bottombar = () => {
             key={`bottombar-${link.label}`}
             to={link.route}
             className={`${
-              isActive && "rounded-[10px] bg-primary-500 "
+              isActive && "rounded-[10px] bg-primary-color dark:text-black "
             } flex-center flex-col gap-1 p-2 transition`}>
             <img
               src={link.imgURL}
               alt={link.label}
               width={16}
               height={16}
-              className={`${isActive && "invert-black"}`}
+              className={`${isActive ? "dark:invert-0" : "dark:invert-white"}`}
             />
 
             <p className={`tiny-medium text-light-2 ${isActive && "text-dark-4"}`}>{link.label}</p>

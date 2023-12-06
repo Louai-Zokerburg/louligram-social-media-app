@@ -139,7 +139,7 @@
   }
 
   .explore-search {
-    @apply h-12 bg-dark-4 border-none placeholder:text-light-3 focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
+    @apply h-12 bg-accent-color dark:bg-accent-color-dark border-none placeholder:text-gray-color focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
   }
 
   /* Home */
@@ -196,7 +196,7 @@
 
   /* Bottom bar */
   .bottom-bar {
-    @apply z-50 flex-between w-full sticky bottom-0 rounded-t-[20px] bg-dark-2 px-5 py-4 md:hidden;
+    @apply z-50 flex-between w-full sticky bottom-0 rounded-t-[20px] bg-secondary-color dark:bg-secondary-color-dark px-5 py-4 md:hidden;
   }
 
   /* File uploader */
@@ -218,11 +218,11 @@
   }
 
   .grid-post_link {
-    @apply flex rounded-[24px] border border-dark-4 overflow-hidden cursor-pointer w-full h-full;
+    @apply flex rounded-[24px] border border-accent-color dark:border-accent-color-dark overflow-hidden cursor-pointer w-full h-full;
   }
 
   .grid-post_user {
-    @apply absolute bottom-0 p-5 flex-between w-full bg-gradient-to-t from-dark-3 to-transparent rounded-b-[24px] gap-2;
+    @apply absolute bottom-0 p-5 flex-between w-full bg-gradient-to-t from-black-color to-transparent rounded-b-[24px] gap-2;
   }
 
   /* Left sidebar */
@@ -236,7 +236,7 @@
 
   /* Post Card */
   .post-card {
-    @apply bg-dark-2 rounded-3xl border border-dark-4 p-5 lg:p-7 w-full max-w-screen-md;
+    @apply bg-secondary-color dark:bg-secondary-color-dark rounded-3xl border border-accent-color dark:border-accent-color-dark p-5 lg:p-7 w-full max-w-screen-md;
   }
 
   .post-card_img {
@@ -245,7 +245,7 @@
 
   /* Topbar */
   .topbar {
-    @apply sticky top-0 z-50 md:hidden bg-dark-2 w-full;
+    @apply sticky top-0 z-50 md:hidden bg-secondary-color dark:bg-secondary-color-dark w-full;
   }
 
   /* User card */
