@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { PostStats } from "@/components/shared";
 import { useUserContext } from "@/context/AuthContext";
+import MiniPostStats from "./MiniPostStats";
 
 type GridPostListProps = {
   posts: Models.Document[];
@@ -40,10 +41,10 @@ const GridPostList = ({
                   alt="creator"
                   className="w-8 h-8 rounded-full"
                 />
-                <p className="line-clamp-1">{post.creator.name}</p>
+                <p className="line-clamp-1 text-white-color">{post.creator.name}</p>
               </div>
             )}
-            {showStats && <PostStats post={post} userId={user.id} />}
+            {showStats && <MiniPostStats post={post} userId={user.id} />}
           </div>
         </li>
       ))}

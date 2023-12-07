@@ -10,7 +10,7 @@
   }
 
   body {
-    @apply bg-dark-1 text-white min-h-screen font-inter;
+    @apply bg-bg-color dark:bg-bg-color-dark text-black-color dark:text-white-color min-h-screen font-inter;
   }
 }
 
@@ -30,6 +30,10 @@
 
   .h3-bold {
     @apply text-[24px] font-bold leading-[140%] tracking-tighter;
+  }
+
+  .h4-bold {
+    @apply text-[18px] font-bold leading-[140%] tracking-tighter;
   }
 
   .base-semibold {
@@ -77,6 +81,10 @@
     @apply invert brightness-0 transition;
   }
 
+  .invert-black {
+    @apply invert brightness-100 transition;
+}
+
   .flex-center {
     @apply flex justify-center items-center;
   }
@@ -96,12 +104,11 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: #09090a;
+    @apply bg-secondary-color dark:bg-secondary-color-dark;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #5c5c7b;
-    border-radius: 50px;
+    @apply rounded-md bg-primary-color
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -131,7 +138,7 @@
   }
 
   .explore-search {
-    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
+    @apply h-12 bg-accent-color dark:bg-accent-color-dark border-none placeholder:text-gray-color focus-visible:ring-0 focus-visible:ring-offset-0 ring-offset-0 !important;
   }
 
   /* Home */
@@ -153,15 +160,15 @@
   }
 
   .post_details-card {
-    @apply bg-dark-2 w-full max-w-5xl rounded-[30px] flex-col flex xl:flex-row border border-dark-4 xl:rounded-l-[24px];
+    @apply bg-secondary-color dark:bg-secondary-color-dark w-full max-w-5xl rounded-[30px] flex-col flex xl:flex-row border-2 border-accent-color dark:border-accent-color-dark xl:rounded-l-[24px];
   }
 
   .post_details-img {
-    @apply h-80 lg:h-[480px] xl:w-[48%] rounded-t-[30px] xl:rounded-l-[24px] xl:rounded-tr-none object-cover p-5 bg-dark-1;
+    @apply h-80 lg:h-[480px] xl:w-[48%] rounded-t-[30px] xl:rounded-l-[24px] xl:rounded-tr-none object-cover p-5 bg-bg-color dark:bg-bg-color-dark;
   }
 
   .post_details-info {
-    @apply bg-dark-2 flex flex-col gap-5 lg:gap-7 flex-1 items-start p-8 rounded-[30px];
+    @apply bg-secondary-color dark:bg-secondary-color-dark flex flex-col gap-5 lg:gap-7 flex-1 items-start p-8 rounded-[30px];
   }
 
   .post_details-delete_btn {
@@ -178,7 +185,7 @@
   }
 
   .profile-tab {
-    @apply flex-center gap-3 py-4 w-48 bg-dark-2  transition flex-1 xl:flex-initial;
+    @apply flex-center gap-3 py-4 w-48 bg-secondary-color dark:bg-secondary-color-dark  transition flex-1 xl:flex-initial;
   }
 
   /* Saved */
@@ -188,7 +195,7 @@
 
   /* Bottom bar */
   .bottom-bar {
-    @apply z-50 flex-between w-full sticky bottom-0 rounded-t-[20px] bg-dark-2 px-5 py-4 md:hidden;
+    @apply z-50 flex-between w-full sticky bottom-0 rounded-t-[20px] bg-secondary-color dark:bg-secondary-color-dark px-5 py-4 md:hidden;
   }
 
   /* File uploader */
@@ -197,7 +204,7 @@
   }
 
   .file_uploader-label {
-    @apply text-light-4 text-center small-regular w-full p-4 border-t border-t-dark-4;
+    @apply text-gray-color text-center small-regular w-full p-4 border-t border-t-accent-color dark:border-accent-color-dark;
   }
 
   .file_uploader-box {
@@ -210,25 +217,25 @@
   }
 
   .grid-post_link {
-    @apply flex rounded-[24px] border border-dark-4 overflow-hidden cursor-pointer w-full h-full;
+    @apply flex rounded-[24px] border border-accent-color dark:border-accent-color-dark overflow-hidden cursor-pointer w-full h-full;
   }
 
   .grid-post_user {
-    @apply absolute bottom-0 p-5 flex-between w-full bg-gradient-to-t from-dark-3 to-transparent rounded-b-[24px] gap-2;
+    @apply absolute bottom-0 p-5 flex-between w-full bg-gradient-to-t from-black-color to-transparent rounded-b-[24px] gap-2;
   }
 
   /* Left sidebar */
   .leftsidebar {
-    @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px] bg-dark-2;
+    @apply hidden md:flex px-6 py-10 flex-col justify-between min-w-[270px] bg-secondary-color dark:bg-secondary-color-dark;
   }
 
   .leftsidebar-link {
-    @apply rounded-lg base-medium hover:bg-primary-500 transition;
+    @apply rounded-lg base-medium hover:bg-primary-color transition;
   }
 
   /* Post Card */
   .post-card {
-    @apply bg-dark-2 rounded-3xl border border-dark-4 p-5 lg:p-7 w-full max-w-screen-sm;
+    @apply bg-secondary-color dark:bg-secondary-color-dark rounded-3xl border border-accent-color dark:border-accent-color-dark p-5 lg:p-7 w-full max-w-screen-md;
   }
 
   .post-card_img {
@@ -237,12 +244,12 @@
 
   /* Topbar */
   .topbar {
-    @apply sticky top-0 z-50 md:hidden bg-dark-2 w-full;
+    @apply sticky top-0 z-50 md:hidden bg-secondary-color dark:bg-secondary-color-dark w-full;
   }
 
   /* User card */
   .user-card {
-    @apply flex-center flex-col gap-4 border border-dark-4 rounded-[20px] px-5 py-8;
+    @apply flex-center flex-col gap-4 border-accent-color border-2 dark:border-accent-color-dark rounded-[20px] px-5 py-8;
   }
 }
 
@@ -250,31 +257,36 @@
   /* SHADCN COMPONENTS */
   /* Form */
   .shad-form_label {
-    @apply text-white !important;
+    @apply text-black-color dark:text-white-color !important;
   }
 
   .shad-form_message {
-    @apply text-red !important;
+    @apply text-danger-color !important;
   }
 
   .shad-input {
-    @apply h-12 bg-dark-4 border-none placeholder:text-light-4 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+    @apply h-12 bg-accent-color dark:bg-accent-color-dark border-none placeholder:text-gray-color focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-gray-color !important;
   }
 
   .shad-textarea {
-    @apply h-36 bg-dark-3 rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+    @apply h-36 bg-accent-color dark:bg-accent-color-dark rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-gray-color !important;
   }
 
   /* Button */
   .shad-button_primary {
-    @apply bg-primary-500 hover:bg-primary-500 text-light-1 flex gap-2 !important;
+    @apply bg-primary-color hover:bg-primary-hover-color text-black-color flex gap-2 !important;
   }
 
+  
   .shad-button_dark_4 {
-    @apply h-12 bg-dark-4 px-5 text-light-1 flex gap-2 !important;
+    @apply h-12 bg-accent-color dark:bg-accent-color-dark px-5  text-black-color dark:text-white-color flex gap-2 !important;
+  }
+
+  .shad-button_secondary {
+    @apply h-12 bg-accent-color dark:bg-accent-color-dark px-5  text-black-color dark:text-white-color flex gap-2 !important;
   }
 
   .shad-button_ghost {
-    @apply flex gap-4 items-center justify-start hover:bg-transparent hover:text-white !important;
+    @apply flex gap-4 items-center justify-start hover:bg-accent-color dark:hover:bg-accent-color-dark  !important;
   }
 }

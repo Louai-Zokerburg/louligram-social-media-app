@@ -15,7 +15,7 @@ type PostStatsProps = {
   userId: string;
 };
 
-const PostStats = ({ post, userId }: PostStatsProps) => {
+const MiniPostStats = ({ post, userId }: PostStatsProps) => {
   const location = useLocation();
   const likesList = post.likes.map((user: Models.Document) => user.$id);
 
@@ -86,7 +86,7 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
           height={20}
           onClick={(e) => handleLikePost(e)}
           className={`cursor-pointer ${
-            !checkIsLiked(likes, userId) && "dark:invert-white"
+            !checkIsLiked(likes, userId) && "invert-white"
           } `}
         />
         <p className="small-medium lg:base-medium">{likes.length}</p>
@@ -98,7 +98,7 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
           alt="share"
           width={20}
           height={20}
-          className={`cursor-pointer ${!isSaved && "dark:invert-white"}`}
+          className={`cursor-pointer ${!isSaved && "invert-white"}`}
           onClick={(e) => handleSavePost(e)}
         />
       </div>
@@ -106,4 +106,4 @@ const PostStats = ({ post, userId }: PostStatsProps) => {
   );
 };
 
-export default PostStats;
+export default MiniPostStats;

@@ -95,6 +95,7 @@ const PostForm = ({ post, action }: PostFormProps) => {
                 <Textarea
                   className="shad-textarea custom-scrollbar"
                   {...field}
+                  placeholder="Your post's content..."
                 />
               </FormControl>
               <FormMessage className="shad-form_message" />
@@ -126,7 +127,7 @@ const PostForm = ({ post, action }: PostFormProps) => {
             <FormItem>
               <FormLabel className="shad-form_label">Add Location</FormLabel>
               <FormControl>
-                <Input type="text" className="shad-input" {...field} />
+                <Input type="text" className="shad-input" {...field} placeholder="Algers"/>
               </FormControl>
               <FormMessage className="shad-form_message" />
             </FormItem>
@@ -157,7 +158,7 @@ const PostForm = ({ post, action }: PostFormProps) => {
         <div className="flex gap-4 items-center justify-end">
           <Button
             type="button"
-            className="shad-button_dark_4"
+            className="shad-button_secondary"
             onClick={() => navigate(-1)}>
             Cancel
           </Button>

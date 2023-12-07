@@ -20,8 +20,8 @@ interface StabBlockProps {
 
 const StatBlock = ({ value, label }: StabBlockProps) => (
   <div className="flex-center gap-2">
-    <p className="small-semibold lg:body-bold text-primary-500">{value}</p>
-    <p className="small-medium lg:base-medium text-light-2">{label}</p>
+    <p className="small-semibold lg:body-bold text-primary-color">{value}</p>
+    <p className="small-medium lg:base-medium text-gray-color">{label}</p>
   </div>
 );
 
@@ -55,7 +55,7 @@ const Profile = () => {
               <h1 className="text-center xl:text-left h3-bold md:h1-semibold w-full">
                 {currentUser.name}
               </h1>
-              <p className="small-regular md:body-medium text-light-3 text-center xl:text-left">
+              <p className="small-regular md:body-medium text-gray-color text-center xl:text-left">
                 @{currentUser.username}
               </p>
             </div>
@@ -75,7 +75,7 @@ const Profile = () => {
             <div className={`${user.id !== currentUser.$id && "hidden"}`}>
               <Link
                 to={`/update-profile/${currentUser.$id}`}
-                className={`h-12 bg-dark-4 px-5 text-light-1 flex-center gap-2 rounded-lg ${
+                className={`h-12 bg-accent-color dark:bg-accent-color-dark px-5  flex-center gap-2 rounded-lg ${
                   user.id !== currentUser.$id && "hidden"
                 }`}>
                 <img
@@ -83,6 +83,7 @@ const Profile = () => {
                   alt="edit"
                   width={20}
                   height={20}
+                  className="dark:invert-white"
                 />
                 <p className="flex whitespace-nowrap small-medium">
                   Edit Profile
@@ -103,26 +104,28 @@ const Profile = () => {
           <Link
             to={`/profile/${id}`}
             className={`profile-tab rounded-l-lg ${
-              pathname === `/profile/${id}` && "!bg-dark-3"
-            }`}>
+              pathname === `/profile/${id}` && "!bg-secondary-color dark:!bg-secondary-color-dark"
+            } !bg-accent-color dark:!bg-accent-color-dark `}>
             <img
               src={"/assets/icons/posts.svg"}
               alt="posts"
               width={20}
               height={20}
+              className="dark:invert-white"
             />
             Posts
           </Link>
           <Link
             to={`/profile/${id}/liked-posts`}
             className={`profile-tab rounded-r-lg ${
-              pathname === `/profile/${id}/liked-posts` && "!bg-dark-3"
-            }`}>
+              pathname === `/profile/${id}/liked-posts` && "!bg-secondary-color dark:!bg-secondary-color-dark"
+            } !bg-accent-color dark:!bg-accent-color-dark`}>
             <img
               src={"/assets/icons/like.svg"}
               alt="like"
               width={20}
               height={20}
+              className="dark:invert-white"
             />
             Liked Posts
           </Link>

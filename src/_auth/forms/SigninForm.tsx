@@ -53,15 +53,15 @@ const SigninForm = () => {
 
   return (
     <Form {...form}>
-      <div className="sm:w-420 flex-center flex-col">
-        <img src="/assets/images/logo.svg" alt="logo" />
+      <div className="sm:w-420 items-start justify-start flex-col">
+        <img src="/assets/images/logo.svg" alt="logo" className="dark:invert-white with-[160px]" />
 
-        <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">
-          Log in to your account
+        <h2 className="h4-bold md:h3-bold pt-2 sm:pt-5">
+          Create a new account
         </h2>
-        <p className="text-light-3 small-medium md:base-regular mt-2">
+        {/* <p className="text-light-3 small-medium md:base-regular mt-2">
           Welcome back! Please enter your details.
-        </p>
+        </p> */}
         <form
           onSubmit={form.handleSubmit(handleSignin)}
           className="flex flex-col gap-5 w-full mt-4">
@@ -72,7 +72,7 @@ const SigninForm = () => {
               <FormItem>
                 <FormLabel className="shad-form_label">Email</FormLabel>
                 <FormControl>
-                  <Input type="text" className="shad-input" {...field} />
+                  <Input type="text" className="shad-input" {...field} placeholder="example@gmail.com"/>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -86,7 +86,7 @@ const SigninForm = () => {
               <FormItem>
                 <FormLabel className="shad-form_label">Password</FormLabel>
                 <FormControl>
-                  <Input type="password" className="shad-input" {...field} />
+                  <Input type="password" className="shad-input" {...field} placeholder="example@gmail.com" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -103,11 +103,11 @@ const SigninForm = () => {
             )}
           </Button>
 
-          <p className="text-small-regular text-light-2 text-center mt-2">
+          <p className="text-small-regular text-black-color dark:text-white-color mt-2">
             Don&apos;t have an account?
             <Link
               to="/sign-up"
-              className="text-primary-500 text-small-semibold ml-1">
+              className="text-primary-color text-small-semibold ml-1">
               Sign up
             </Link>
           </p>

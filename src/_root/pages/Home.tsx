@@ -22,10 +22,10 @@ const Home = () => {
     return (
       <div className="flex flex-1">
         <div className="home-container">
-          <p className="body-medium text-light-1">Something bad happened</p>
+          <p className="body-medium text-black-color-color dark:text-white-color">Something bad happened</p>
         </div>
         <div className="home-creators">
-          <p className="body-medium text-light-1">Something bad happened</p>
+          <p className="body-medium text-black-color-color dark:text-white-color">Something bad happened</p>
         </div>
       </div>
     );
