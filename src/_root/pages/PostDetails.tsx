@@ -44,6 +44,7 @@ const PostDetails = () => {
             alt="back"
             width={24}
             height={24}
+            className="dark:invert-white"
           />
           <p className="small-medium lg:base-medium">Back</p>
         </Button>
