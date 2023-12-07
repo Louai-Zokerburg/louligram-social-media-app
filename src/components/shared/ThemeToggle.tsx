@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { useTheme } from "@/context/ThemeProvider"
 
-function ThemeToggleTestPage() {
+function ThemeToggle() {
   const { setTheme } = useTheme()
 
   return (
@@ -21,14 +21,14 @@ function ThemeToggleTestPage() {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => setTheme("light")}>
+      <DropdownMenuContent align="end" className="bg-secondary-color dark:bg-secondary-color-dark">
+        <DropdownMenuItem onClick={() => setTheme("light")} className="shad-button_ghost cursor-pointer">
           Light
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("dark")}>
+        <DropdownMenuItem onClick={() => setTheme("dark")} className="shad-button_ghost cursor-pointer">
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
+        <DropdownMenuItem onClick={() => setTheme("system")} className="shad-button_ghost cursor-pointer">
           System
         </DropdownMenuItem>
       </DropdownMenuContent>
@@ -36,4 +36,4 @@ function ThemeToggleTestPage() {
   )
 }
 
-export default ThemeToggleTestPage
+export default ThemeToggle

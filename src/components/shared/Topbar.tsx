@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { useUserContext } from "@/context/AuthContext";
 import { useSignOutAccount } from "@/lib/react-query/queries";
+import ThemeToggle from "./ThemeToggle";
 
 const Topbar = () => {
   const navigate = useNavigate();
@@ -34,6 +35,7 @@ const Topbar = () => {
             onClick={() => signOut()}>
             <img src="/assets/icons/logout.svg" alt="logout" className="dark:invert-white" />
           </Button>
+          <ThemeToggle />
           <Link to={`/profile/${user.id}`} className="flex-center gap-3">
             <img
               src={user.imageUrl || "/assets/icons/profile-placeholder.svg"}

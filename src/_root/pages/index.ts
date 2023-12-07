@@ -8,4 +8,3 @@ export { default as EditPost } from "./EditPost";
 export { default as PostDetails } from "./PostDetails";
 export { default as LikedPosts } from "./LikedPosts";
 export { default as AllUsers } from "./AllUsers";
-export { default as ThemeToggleTestPage} from './ThemeToggoleTestPage'

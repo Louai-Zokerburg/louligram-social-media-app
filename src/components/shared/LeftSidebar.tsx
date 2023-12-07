@@ -6,6 +6,7 @@ import { Loader } from "@/components/shared";
 import { Button } from "@/components/ui/button";
 import { useSignOutAccount } from "@/lib/react-query/queries";
 import { useUserContext, INITIAL_USER } from "@/context/AuthContext";
+import ThemeToggle from "./ThemeToggle";
 
 const LeftSidebar = () => {
   const navigate = useNavigate();
@@ -26,7 +27,9 @@ const LeftSidebar = () => {
 
   return (
     <nav className="leftsidebar">
+
       <div className="flex flex-col gap-11">
+        <div className="flex justify-center items-center gap-x-4 z-100">
         <Link to="/" className="flex gap-3 items-center">
           <img
             src="/assets/images/logo.svg"
@@ -36,6 +39,8 @@ const LeftSidebar = () => {
             className="dark:invert-white"
           />
         </Link>
+         <ThemeToggle />
+        </div>
 
         {isLoading || !user.email ? (
           <div className="h-14">

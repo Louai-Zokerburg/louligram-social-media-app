@@ -104,12 +104,11 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: #09090a;
+    @apply bg-secondary-color dark:bg-secondary-color-dark;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #5c5c7b;
-    border-radius: 50px;
+    @apply rounded-md bg-primary-color
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -161,15 +160,15 @@
   }
 
   .post_details-card {
-    @apply bg-dark-2 w-full max-w-5xl rounded-[30px] flex-col flex xl:flex-row border border-dark-4 xl:rounded-l-[24px];
+    @apply bg-secondary-color dark:bg-secondary-color-dark w-full max-w-5xl rounded-[30px] flex-col flex xl:flex-row border-2 border-accent-color dark:border-accent-color-dark xl:rounded-l-[24px];
   }
 
   .post_details-img {
-    @apply h-80 lg:h-[480px] xl:w-[48%] rounded-t-[30px] xl:rounded-l-[24px] xl:rounded-tr-none object-cover p-5 bg-dark-1;
+    @apply h-80 lg:h-[480px] xl:w-[48%] rounded-t-[30px] xl:rounded-l-[24px] xl:rounded-tr-none object-cover p-5 bg-bg-color dark:bg-bg-color-dark;
   }
 
   .post_details-info {
-    @apply bg-dark-2 flex flex-col gap-5 lg:gap-7 flex-1 items-start p-8 rounded-[30px];
+    @apply bg-secondary-color dark:bg-secondary-color-dark flex flex-col gap-5 lg:gap-7 flex-1 items-start p-8 rounded-[30px];
   }
 
   .post_details-delete_btn {
@@ -186,7 +185,7 @@
   }
 
   .profile-tab {
-    @apply flex-center gap-3 py-4 w-48 bg-dark-2  transition flex-1 xl:flex-initial;
+    @apply flex-center gap-3 py-4 w-48 bg-secondary-color dark:bg-secondary-color-dark  transition flex-1 xl:flex-initial;
   }
 
   /* Saved */
@@ -205,7 +204,7 @@
   }
 
   .file_uploader-label {
-    @apply text-light-3 text-center small-regular w-full p-4 border-t border-t-dark-4;
+    @apply text-gray-color text-center small-regular w-full p-4 border-t border-t-accent-color dark:border-accent-color-dark;
   }
 
   .file_uploader-box {
@@ -262,7 +261,7 @@
   }
 
   .shad-form_message {
-    @apply text-red !important;
+    @apply text-danger-color !important;
   }
 
   .shad-input {
@@ -270,7 +269,7 @@
   }
 
   .shad-textarea {
-    @apply h-36 bg-accent-color dark:bg-accent-color-dark rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-light-3 !important;
+    @apply h-36 bg-accent-color dark:bg-accent-color-dark rounded-xl border-none focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-gray-color !important;
   }
 
   /* Button */
@@ -288,6 +287,6 @@
   }
 
   .shad-button_ghost {
-    @apply flex gap-4 items-center justify-start hover:bg-danger-color  !important;
+    @apply flex gap-4 items-center justify-start hover:bg-accent-color dark:hover:bg-accent-color-dark  !important;
   }
 }
