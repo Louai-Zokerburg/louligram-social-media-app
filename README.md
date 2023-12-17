@@ -2,7 +2,7 @@
 
 # **Louligram**
 
-![stylee one.png](https://github.com/Louai-Zokerburg/louligram-social-media-app/blob/main/public/Cover%20Image.png?raw=true)
+![stylee one.png](https://github.com/Louai-Zokerburg/louligram-social-media-app/blob/main/project-cover.png?raw=true)
 
 ## **Live Demo**
 
