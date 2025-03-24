@@ -6,7 +6,7 @@
 
 ## **Live Demo**
 
-Check out the live demo [here](https://louligram-social-media-app.vercel.app) 
+Check out the live demo [here](https://louligram.louai.site) 
 
 ## **Description**
 
